@@ -1,32 +1,24 @@
 <!-- Navigation -->
 <nav class="navbar">
   <div class="nav-container">
-    
-    <!-- Logo + Title -->
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <!-- <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%;"> -->
+    <div class="nav-logo">
       <h2 style="color: white; margin: 0; font-size: 1.5rem; letter-spacing: 1px;">SocialBoost</h2>
     </div>
-
-    <!-- Menu -->
-    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px;">
-      <li><a href="javascript:void(0)" (click)="scrollToSection('home')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Home</a></li>
-      <li><a href="javascript:void(0)" (click)="scrollToSection('services')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Services</a></li>
-      <li><a href="javascript:void(0)" (click)="scrollToSection('about')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">About</a></li>
-      <li><a href="javascript:void(0)" (click)="scrollToSection('portfolio')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Portfolio</a></li>
-      <li><a href="javascript:void(0)" (click)="scrollToSection('contact')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Contact</a></li>
-      <li><a href="javascript:void(0)" (click)="logout()" style="color: #ffe0b2; text-decoration: none; font-weight: 600; transition: 0.3s;">Logout</a></li>
+    <ul class="nav-menu">
+      <li><a href="javascript:void(0)" (click)="scrollToSection('home')">Home</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('services')">Services</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('about')">About</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('portfolio')">Portfolio</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('contact')">Contact</a></li>
+      <li><a href="javascript:void(0)" (click)="logout()">Logout</a></li>
     </ul>
-
-    <!-- Hamburger -->
-    <div style="display: none; flex-direction: column; cursor: pointer; gap: 5px;">
-      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
-      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
-      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 </nav>
-
 
 <!-- Hero Section -->
 <section id="home" class="hero">
