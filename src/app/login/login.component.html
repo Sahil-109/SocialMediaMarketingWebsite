@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-form">
+    <h2>Login to SocialBoost</h2>
+    <p class="subtitle">Welcome back! Please sign in to your account.</p>
+    
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input 
+          type="text" 
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          required
+          placeholder="Enter username"
+          class="form-control"
+        >
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+          placeholder="Enter password"
+          class="form-control"
+        >
+      </div>
+      
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      
+      <button type="submit" class="login-btn" [disabled]="!loginForm.form.valid">
+        Sign In
+      </button>
+    </form>
+    
+    <div class="demo-credentials">
+      <p><strong>Demo Credentials:</strong></p>
+      <p>Username: aaa</p>
+      <p>Password: 123</p>
+    </div>
+  </div>
+</div>

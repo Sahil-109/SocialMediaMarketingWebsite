@@ -1,17 +1,22 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { LoginComponent } from "./login/login.component";
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LoginComponent],
-  templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  imports: [CommonModule],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent {
+export class HomeComponent {
   protected readonly title = signal('SocialBoost - Social Media Marketing');
+
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
@@ -56,5 +61,9 @@ export class AppComponent {
         (contactForm as HTMLFormElement).reset();
       });
     }
+  }
+
+  logout(): void {
+    this.authService.logout();
   }
 }

@@ -1,0 +1,415 @@
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    
+    <!-- Logo + Title -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <!-- <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%;"> -->
+      <h2 style="color: white; margin: 0; font-size: 1.5rem; letter-spacing: 1px;">SocialBoost</h2>
+    </div>
+
+    <!-- Menu -->
+    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px;">
+      <li><a href="javascript:void(0)" (click)="scrollToSection('home')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Home</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('services')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Services</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('about')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">About</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('portfolio')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Portfolio</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollToSection('contact')" style="color: white; text-decoration: none; font-weight: 500; transition: 0.3s;">Contact</a></li>
+      <li><a href="javascript:void(0)" (click)="logout()" style="color: #ffe0b2; text-decoration: none; font-weight: 600; transition: 0.3s;">Logout</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div style="display: none; flex-direction: column; cursor: pointer; gap: 5px;">
+      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1>Transform Your Brand with <span class="highlight">Social Media Marketing</span></h1>
+      <p>We help businesses grow their online presence, engage with customers, and drive sales through strategic social
+        media marketing.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" (click)="scrollToSection('services')">Get Started</button>
+        <button class="btn-secondary" (click)="scrollToSection('portfolio')">View Our Work</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-card">
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services" style="padding:60px 20px;background:#f9f9f9;">
+  <div class="container" style="max-width:1200px;margin:auto;">
+    <h2 style="text-align:center;font-size:2.5rem;margin-bottom:10px;color:#333;">Our Services</h2>
+    <p style="text-align:center;font-size:1.2rem;color:#777;margin-bottom:40px;">
+      Comprehensive social media solutions tailored to your business needs
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;justify-items:center;">
+
+      <!-- Social Media Management -->
+      <div style="background:#fff;border-radius:15px;overflow:hidden;box-shadow:0px 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;width:100%;max-width:340px;text-align:center;">
+        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48" alt="Social Media Management" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="font-size:40px;color:#ff5722;margin:15px auto 5px;">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h3 style="font-size:1.3rem;margin:10px 0;color:#333;">Social Media Management</h3>
+        <p style="font-size:0.95rem;color:#555;padding:0 15px;min-height:60px;">
+          Complete management of your social media accounts with engaging content and consistent posting schedules.
+        </p>
+        <ul style="list-style:none;padding:0;margin:15px 0 20px;">
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Content creation & curation</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Community management</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Brand voice development</li>
+        </ul>
+      </div>
+
+      <!-- Paid Advertising -->
+      <div style="background:#fff;border-radius:15px;overflow:hidden;box-shadow:0px 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;width:100%;max-width:340px;text-align:center;">
+        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62" alt="Paid Advertising" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="font-size:40px;color:#ff5722;margin:15px auto 5px;">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 style="font-size:1.3rem;margin:10px 0;color:#333;">Paid Advertising</h3>
+        <p style="font-size:0.95rem;color:#555;padding:0 15px;min-height:60px;">
+          Strategic ad campaigns across all major platforms to maximize your ROI and reach your target audience.
+        </p>
+        <ul style="list-style:none;padding:0;margin:15px 0 20px;">
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Facebook & Instagram Ads</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">LinkedIn Advertising</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Twitter Promotions</li>
+        </ul>
+      </div>
+
+      <!-- Influencer Marketing -->
+      <div style="background:#fff;border-radius:15px;overflow:hidden;box-shadow:0px 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;width:100%;max-width:340px;text-align:center;">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Influencer Marketing" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="font-size:40px;color:#ff5722;margin:15px auto 5px;">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 style="font-size:1.3rem;margin:10px 0;color:#333;">Influencer Marketing</h3>
+        <p style="font-size:0.95rem;color:#555;padding:0 15px;min-height:60px;">
+          Connect with relevant influencers to expand your reach and build authentic brand partnerships.
+        </p>
+        <ul style="list-style:none;padding:0;margin:15px 0 20px;">
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Influencer identification</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Campaign management</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Performance tracking</li>
+        </ul>
+      </div>
+
+      <!-- Content Creation -->
+      <div style="background:#fff;border-radius:15px;overflow:hidden;box-shadow:0px 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;width:100%;max-width:340px;text-align:center;">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657" alt="Content Creation" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="font-size:40px;color:#ff5722;margin:15px auto 5px;">
+          <i class="fas fa-camera"></i>
+        </div>
+        <h3 style="font-size:1.3rem;margin:10px 0;color:#333;">Content Creation</h3>
+        <p style="font-size:0.95rem;color:#555;padding:0 15px;min-height:60px;">
+          High-quality visual content including graphics, videos, and photography that resonates with your audience.
+        </p>
+        <ul style="list-style:none;padding:0;margin:15px 0 20px;">
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Graphic design</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Video production</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Photography services</li>
+        </ul>
+      </div>
+
+     <!-- Social Media Audit -->
+<div style="background:#fff;border-radius:15px;overflow:hidden;box-shadow:0px 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;width:100%;max-width:340px;text-align:center;">
+  <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+       alt="Social Media Audit" 
+       style="width:100%;height:220px;object-fit:cover;display:block;">
+  <div style="font-size:40px;color:#ff5722;margin:15px auto 5px;">
+    <i class="fas fa-search"></i>
+  </div>
+  <h3 style="font-size:1.3rem;margin:10px 0;color:#333;">Social Media Audit</h3>
+  <p style="font-size:0.95rem;color:#555;padding:0 15px;min-height:60px;">
+    Comprehensive analysis of your current social media presence with actionable recommendations for improvement.
+  </p>
+  <ul style="list-style:none;padding:0;margin:15px 0 20px;">
+    <li style="font-size:0.9rem;color:#666;padding:3px 0;">Competitor analysis</li>
+    <li style="font-size:0.9rem;color:#666;padding:3px 0;">Performance metrics</li>
+    <li style="font-size:0.9rem;color:#666;padding:3px 0;">Strategy optimization</li>
+  </ul>
+</div>
+
+      <!-- Growth Strategy -->
+      <div style="background:#fff;border-radius:15px;overflow:hidden;box-shadow:0px 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;width:100%;max-width:340px;text-align:center;">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Growth Strategy" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="font-size:40px;color:#ff5722;margin:15px auto 5px;">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3 style="font-size:1.3rem;margin:10px 0;color:#333;">Growth Strategy</h3>
+        <p style="font-size:0.95rem;color:#555;padding:0 15px;min-height:60px;">
+          Data-driven strategies to grow your follower base and increase engagement across all platforms.
+        </p>
+        <ul style="list-style:none;padding:0;margin:15px 0 20px;">
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Audience targeting</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Hashtag research</li>
+          <li style="font-size:0.9rem;color:#666;padding:3px 0;">Engagement tactics</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Why Choose SocialBoost?</h2>
+        <p>We are a team of passionate social media experts dedicated to helping businesses thrive in the digital
+          landscape. With over 8 years of experience, we've helped hundreds of brands achieve their marketing goals.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>500+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat">
+            <h3>50M+</h3>
+            <p>Impressions Generated</p>
+          </div>
+          <div class="stat">
+            <h3>8+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat">
+            <h3>95%</h3>
+            <p>Client Retention</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop" alt="Team working">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <h2>Our Portfolio</h2>
+    <p class="section-subtitle">See how we've helped businesses like yours succeed</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop" alt="Campaign 1">
+        <div class="portfolio-overlay">
+          <h3>Fashion Brand Campaign</h3>
+          <p>300% increase in engagement</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop" alt="Campaign 2">
+        <div class="portfolio-overlay">
+          <h3>Restaurant Chain</h3>
+          <p>500% follower growth in 6 months</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Campaign 3">
+        <div class="portfolio-overlay">
+          <h3>Tech Startup</h3>
+          <p>Generated 10K+ qualified leads</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Campaign 4">
+        <div class="portfolio-overlay">
+          <h3>E-commerce Store</h3>
+          <p>$50K in sales from social media</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing">
+  <div class="container">
+    <h2>Pricing Plans</h2>
+    <p class="section-subtitle">Choose the perfect plan for your business</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price">$299<span>/month</span></div>
+        <ul>
+          <li>3 Social Platforms</li>
+          <li>12 Posts Per Month</li>
+          <li>Basic Analytics</li>
+          <li>Community Management</li>
+          <li>Monthly Reports</li>
+        </ul>
+        <button class="btn-primary">Get Started</button>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="badge">Most Popular</div>
+        <h3>Professional</h3>
+        <div class="price">$599<span>/month</span></div>
+        <ul>
+          <li>5 Social Platforms</li>
+          <li>24 Posts Per Month</li>
+          <li>Advanced Analytics</li>
+          <li>Paid Ad Management</li>
+          <li>Weekly Reports</li>
+          <li>Content Creation</li>
+        </ul>
+        <button class="btn-primary">Get Started</button>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">$999<span>/month</span></div>
+        <ul>
+          <li>All Social Platforms</li>
+          <li>Unlimited Posts</li>
+          <li>Custom Analytics</li>
+          <li>Full Ad Campaigns</li>
+          <li>Daily Reports</li>
+          <li>Dedicated Manager</li>
+        </ul>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p class="section-subtitle">Ready to grow your social media presence? Let's talk!</p>
+
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope" style="color: black;"></i>
+          <div>
+            <h4>Email</h4>
+            <p>hello@socialboost.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Address</h4>
+            <p>123 Marketing St, Digital City, DC 12345</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="">Select Service</option>
+            <option value="management">Social Media Management</option>
+            <option value="advertising">Paid Advertising</option>
+            <option value="influencer">Influencer Marketing</option>
+            <option value="content">Content Creation</option>
+            <option value="audit">Social Media Audit</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SocialBoost</h3>
+        <p>Transforming brands through strategic social media marketing.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Social Media Management</a></li>
+          <li><a href="#services">Paid Advertising</a></li>
+          <li><a href="#services">Influencer Marketing</a></li>
+          <li><a href="#services">Content Creation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Free Tools</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 SocialBoost. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
